@@ -56,11 +56,11 @@
   };
 
   SP.toFullMark = function() {
-    return this.replace(/[-!#$%&()=<>,.?_[]{}@^~]/g, function(match) {
+    return this.replace(/[\-!#\$%&\(\)=<>,\.\?_\[\]\{\}@\^~]/g, function(match) {
       return String.fromCharCode(match.charCodeAt(0) + diff);
     })
     .replace(/ /g, '　')
-    .replace(/|/g, '｜')
+    .replace(/\|/g, '｜')
     .replace(/`/g, '｀')
     .replace(/\'/g, '’')
     .replace(/"/g, '”');
